@@ -35,7 +35,7 @@ public class UserInterface {
     {
         BorderPane root = new BorderPane();
         root.setPrefSize(800,600);
-       // root.setCenter(loginPage);
+        // root.setCenter(loginPage);
         root.setTop(headerBar);
         body = new VBox();
         body.setPadding(new Insets(10));
@@ -43,7 +43,7 @@ public class UserInterface {
         root.setCenter(body);
         productPage=productList.getAllProducts();
         OrdersPage = orderList.getAllProducts();
-       // root.setCenter(productPage);
+        // root.setCenter(productPage);
         body.getChildren().add(productPage);
 
         root.setBottom(footerBar);
@@ -59,14 +59,14 @@ public class UserInterface {
         Text userNameText = new Text("User Name");
         Text passwordText = new Text("Password");
 
-        TextField userName = new TextField("karthikd20009@gmail.com");
+        TextField userName = new TextField("zikra70@gmail.com");
         userName.setPromptText("Type your user name");
 
         TextField password = new TextField();
         password.setText("abcd");
         password.setPromptText("Type your password");
         Button loginBtn = new Button("Login");
-        labelText = new Label("hi");
+        labelText = new Label("Hi 😊");;
         loginPage = new GridPane();
         loginPage.setAlignment(Pos.CENTER);
         loginPage.setHgap(10);
@@ -107,14 +107,37 @@ public class UserInterface {
     private void createHeaderBar()
     {
 
-
+//Home button
         Button homebtn = new Button();
-        Image image = new Image("C:\\Users\\User\\Desktop\\Java\\E-Commerce\\src\\img.png");
+        Image image = new Image("C:\\Users\\zikra\\IdeaProjects\\e_commerce\\src\\main\\java\\home.png");
+
+
+
+
+
+
         ImageView imageView = new ImageView();
         imageView.setImage(image);
         imageView.setFitWidth(40);
         imageView.setFitHeight(20);
         homebtn.setGraphic(imageView);
+
+        // Creating and Adding image to cart button.
+        Button btn_cart = new Button();
+        Image img = new Image("C:\\Users\\zikra\\IdeaProjects\\e_commerce\\src\\main\\java\\pngegg.png");
+        ImageView imgView = new ImageView(img);
+        imgView.setFitHeight(21);
+        imgView.setFitWidth(25);
+        btn_cart.setGraphic(imgView);
+        welcomeUser = new Label();
+        // Adjusting header.
+//        header = new HBox();
+//        header.setPadding(new Insets(10));
+//        header.setSpacing(10);
+//        header.setFillHeight(true);
+//        header.setAlignment(Pos.CENTER);
+
+
 
 
         TextField searchBar = new TextField();
@@ -189,7 +212,7 @@ public class UserInterface {
                 if(loggedInCustomer==null)
                 {
                     if(headerBar.getChildren().indexOf(signBtn)==-1)  // not creating duplicate sign in buttons
-                          headerBar.getChildren().add(signBtn);
+                        headerBar.getChildren().add(signBtn);
                 }
             }
         });
@@ -252,17 +275,17 @@ public class UserInterface {
             }
         });
 
-     }
+    }
 
 
-        private void showDialog(String msg)
-        {
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setHeaderText(null);
-            alert.setContentText(msg);
-            alert.setTitle("Message");
-            alert.showAndWait();
-        }
+    private void showDialog(String msg)
+    {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setHeaderText(null);
+        alert.setContentText(msg);
+        alert.setTitle("Message");
+        alert.showAndWait();
+    }
 
 
 

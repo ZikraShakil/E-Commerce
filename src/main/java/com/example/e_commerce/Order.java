@@ -76,7 +76,7 @@ public class Order {
         {
             if(rs.next())
             {
-                String query = "INSERT INTO orders(group_order_id, customer_id, product_id)VALUES("+rs.getInt("id")+","+customer.getId()+","+product.getId()+")";
+                String query = "INSERT INTO orders(group_order_id, costomer_id, product_id)VALUES("+rs.getInt("id")+","+customer.getId()+","+product.getId()+")";
                 return conn.updateDB(query) !=0;
             }
         }
@@ -99,7 +99,7 @@ public class Order {
             {
                 for(Product product:productList)
                 {
-                    String query = "INSERT INTO orders(group_order_id, customer_id, product_id)VALUES("+rs.getInt("id")+","+customer.getId()+","+product.getId()+")";
+                    String query = "INSERT INTO orders(group_order_id, costomer_id, product_id)VALUES("+rs.getInt("id")+","+customer.getId()+","+product.getId()+")";
                     count += conn.updateDB(query);
                 }
                 return count;

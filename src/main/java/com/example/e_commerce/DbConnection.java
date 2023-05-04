@@ -5,7 +5,7 @@ import java.sql.*;
 public class DbConnection {
     private final String url = "jdbc:mysql://localhost:3306/ecommerce";
     private final String userName = "root";
-    private final String password = "Karthik22";
+    private final String password = "Zikra@123#";
 
     private Statement getStatement()
     {

@@ -13,7 +13,8 @@ public class E_Commerce extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        Scene scene = new Scene(ui.createContent());
+        Scene
+                scene = new Scene(ui.createContent());
         stage.setTitle("E-Commerce");
         stage.setScene(scene);
         stage.show();

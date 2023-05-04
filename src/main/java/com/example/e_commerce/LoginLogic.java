@@ -25,7 +25,7 @@ public class LoginLogic {
 
     public static void main(String[] args) {
         LoginLogic login = new LoginLogic();
-        Customer customer = login.customerLogic("zikra70@@gmail.com","abcd");
+        Customer customer = login.customerLogic("zikra70@gmail.com","abcd");
         System.out.println("Welcome :"+ customer.getName());
     }
 }
