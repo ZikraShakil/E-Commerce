@@ -14,7 +14,7 @@ public class productList {
 
 
 
-    public VBox createTable(ObservableList data){
+    public VBox createTable(ObservableList<product> data){
 
         TableColumn id = new TableColumn("ID");
         id.setCellValueFactory(new PropertyValueFactory<>("id"));
@@ -32,23 +32,24 @@ public class productList {
         productTable = new TableView<>();
         productTable.setItems(data);
         productTable.getColumns().addAll(id,name,price);
+        productTable.setItems(data);
         productTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
 
         VBox vBox = new VBox();
 
-        vBox.setPadding(new Insets(10));
+        vBox.setPadding(new Insets(20));
         vBox.getChildren().addAll(productTable);
         return vBox;
 
     }
 
 
-    public VBox getdummyTable(){
-        ObservableList<product> data = FXCollections.observableArrayList();
-        data.add(new product(2,"iPhone",44500) );
-        data.add(new product(5,"iPhone 14",84500) );
-        return createTable(data);
-    }
+//    public VBox getdummyTable(){
+//        ObservableList<product> data = FXCollections.observableArrayList();
+//        data.add(new product(2,"iPhone",44500) );
+//        data.add(new product(5,"iPhone 14",84500) );
+//        return createTable(data);
+//    }
 
     public VBox getAllProducts(){
         ObservableList<product> data = product.getProducts();
